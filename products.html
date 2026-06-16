@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop Urban Thread - Premium luxury fashion collections for men and women">
+    <meta name="keywords" content="luxury fashion, clothing, designer brands">
+    <title>Shop - Urban Thread Luxury Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">URBAN</span>
+                    <span class="logo-highlight">THREAD</span>
+                </a>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Shop</a>
+                <a href="pricing.html" class="nav-link">Collections</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-icons">
+                <button class="nav-icon" id="searchBtn" title="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <circle cx="8" cy="8" r="6"></circle>
+                        <path d="m12 12 4 4"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" id="wishlistBtn" title="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <path d="M10 18.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-6.55 8.53L10 18.35z"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" id="cartBtn" title="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <path d="M3 3h2l.4 2M5 5h14l-1 8H6l-1-8z"></path>
+                        <circle cx="8" cy="17" r="1"></circle>
+                        <circle cx="16" cy="17" r="1"></circle>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="nav-icon menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="products-header">
+        <div class="header-content">
+            <h1 class="header-title" data-aos="fade-up">Shop Collection</h1>
+            <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">Explore our curated selection of premium fashion</p>
+        </div>
+    </section>
+
+    <!-- Main Products Section -->
+    <section class="products-section">
+        <div class="products-container">
+            <!-- Filters Sidebar -->
+            <aside class="filters-sidebar" id="filtersSidebar">
+                <div class="filters-header">
+                    <h3>Filters</h3>
+                    <button class="close-filters" id="closeFilters">×</button>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Category</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="all" checked>
+                            <span>All Products</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="Men's Collection">
+                            <span>Men's Collection</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="Women's Collection">
+                            <span>Women's Collection</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="Street Luxury">
+                            <span>Street Luxury</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="Essentials">
+                            <span>Essentials</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="Limited Edition">
+                            <span>Limited Edition</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="Accessories">
+                            <span>Accessories</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Price Range</h4>
+                    <div class="price-range">
+                        <input type="range" id="priceMin" min="0" max="1000" value="0" class="price-slider">
+                        <input type="range" id="priceMax" min="0" max="1000" value="1000" class="price-slider">
+                    </div>
+                    <div class="price-display">
+                        <span>$<span id="minPrice">0</span></span>
+                        <span>-</span>
+                        <span>$<span id="maxPrice">1000</span></span>
+                    </div>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Size</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="size" value="XS">
+                            <span>XS</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="size" value="S">
+                            <span>S</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="size" value="M">
+                            <span>M</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="size" value="L">
+                            <span>L</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="size" value="XL">
+                            <span>XL</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="size" value="XXL">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Material Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Material</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="Cotton">
+                            <span>Cotton</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="Wool">
+                            <span>Wool</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="Silk">
+                            <span>Silk</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="Denim">
+                            <span>Denim</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="material" value="Leather">
+                            <span>Leather</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Color Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Color</h4>
+                    <div class="color-options">
+                        <label class="color-option" title="Black">
+                            <input type="checkbox" name="color" value="black">
+                            <span style="background: #000000;"></span>
+                        </label>
+                        <label class="color-option" title="White">
+                            <input type="checkbox" name="color" value="white">
+                            <span style="background: #ffffff; border: 1px solid #333;"></span>
+                        </label>
+                        <label class="color-option" title="Gray">
+                            <input type="checkbox" name="color" value="gray">
+                            <span style="background: #808080;"></span>
+                        </label>
+                        <label class="color-option" title="Gold">
+                            <input type="checkbox" name="color" value="gold">
+                            <span style="background: #d4af37;"></span>
+                        </label>
+                        <label class="color-option" title="Navy">
+                            <input type="checkbox" name="color" value="navy">
+                            <span style="background: #001f3f;"></span>
+                        </label>
+                        <label class="color-option" title="Beige">
+                            <input type="checkbox" name="color" value="beige">
+                            <span style="background: #f5e6d3;"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Rating Filter -->
+                <div class="filter-group">
+                    <h4 class="filter-title">Rating</h4>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="rating" value="5">
+                            <span>★★★★★ 5 Stars</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="rating" value="4">
+                            <span>★★★★☆ 4+ Stars</span>
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="rating" value="3">
+                            <span>★★★☆☆ 3+ Stars</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" id="applyFilters">Apply Filters</button>
+                <button class="btn btn-outline btn-block" id="resetFilters">Reset Filters</button>
+            </aside>
+
+            <!-- Products Main Area -->
+            <div class="products-main">
+                <!-- Toolbar -->
+                <div class="products-toolbar">
+                    <div class="toolbar-left">
+                        <button class="toggle-filters" id="toggleFilters">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 4h16v2H2V4zm2 7h12v2H4v-2zm4 7h4v2H8v-2z"/>
+                            </svg>
+                            Filters
+                        </button>
+                        <span class="products-count">Showing <span id="productCount">0</span> products</span>
+                    </div>
+
+                    <div class="toolbar-right">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="">Sort By</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="bestseller">Best Sellers</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <rect x="2" y="2" width="6" height="6"/>
+                                    <rect x="12" y="2" width="6" height="6"/>
+                                    <rect x="2" y="12" width="6" height="6"/>
+                                    <rect x="12" y="12" width="6" height="6"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <rect x="2" y="2" width="16" height="3"/>
+                                    <rect x="2" y="8" width="16" height="3"/>
+                                    <rect x="2" y="14" width="16" height="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products loaded via JavaScript -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <div class="empty-state-icon">🔍</div>
+                    <h3>No products found</h3>
+                    <p>Try adjusting your filters or search terms</p>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination">
+                    <!-- Pagination buttons loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+        <div class="newsletter-content" data-aos="fade-up">
+            <h2>Exclusive Member Access</h2>
+            <p>Subscribe to Urban Elite Club and get early access to new collections.</p>
+
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+
+            <p class="newsletter-terms">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Urban Thread</h4>
+                <p>Redefining modern luxury through timeless designs and premium craftsmanship.</p>
+                <div class="social-links">
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="TikTok">♪</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Men's Collection</a></li>
+                    <li><a href="#">Women's Collection</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Limited Edition</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@urbanthreadatelier.com</p>
+                <p>Phone: +1 (800) URBAN-THREAD</p>
+                <p>Address: 123 Fashion Avenue, New York, NY 10001</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Urban Thread. All rights reserved. | Crafted with elegance</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

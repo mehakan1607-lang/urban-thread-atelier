@@ -1,0 +1,448 @@
+/* ============================================
+   RESPONSIVE DESIGN & MEDIA QUERIES
+   Mobile-First Approach
+   ============================================ */
+
+/* ============================================
+   TABLETS (768px and up)
+   ============================================ */
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .hero {
+        padding: 150px var(--spacing-lg);
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .nav-menu {
+        gap: var(--spacing-xl);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: row;
+    }
+}
+
+/* ============================================
+   TABLETS - PORTRAIT (768px to 1024px)
+   ============================================ */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .nav-menu {
+        gap: var(--spacing-lg);
+    }
+}
+
+/* ============================================
+   DESKTOP (1024px and up)
+   ============================================ */
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (1440px and up)
+   ============================================ */
+
+@media screen and (min-width: 1440px) {
+    .container {
+        padding: 0 var(--spacing-xxl);
+    }
+
+    .hero {
+        padding: 200px var(--spacing-xxl);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-xxl);
+    }
+}
+
+/* ============================================
+   SMALL SCREENS / MOBILE (Below 768px)
+   ============================================ */
+
+@media screen and (max-width: 767px) {
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    .hero {
+        padding: 60px var(--spacing-md);
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    /* Navigation */
+    .nav-content {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .logo h1 {
+        font-size: var(--font-size-large);
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-icons {
+        width: 100%;
+        justify-content: space-around;
+        gap: var(--spacing-md);
+    }
+
+    /* Sections */
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    /* Products */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .product-image {
+        height: 280px;
+    }
+
+    /* About */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .stat-card {
+        padding: var(--spacing-lg);
+    }
+
+    .stat-card h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Newsletter */
+    .newsletter-form {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   EXTRA SMALL SCREENS (Below 480px)
+   ============================================ */
+
+@media screen and (max-width: 480px) {
+    /* Base Font Size */
+    body {
+        font-size: 14px;
+    }
+
+    /* Spacing */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 40px var(--spacing-md);
+        min-height: 300px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    /* Navigation */
+    .navbar {
+        border-bottom: 1px solid var(--luxury-gold);
+    }
+
+    .logo h1 {
+        font-size: var(--font-size-base);
+    }
+
+    .nav-icons {
+        font-size: var(--font-size-large);
+        gap: var(--spacing-md);
+    }
+
+    .icon-btn {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Buttons */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 14px;
+    }
+
+    .btn-small {
+        padding: 6px var(--spacing-md);
+    }
+
+    /* Product Cards */
+    .product-image {
+        height: 240px;
+    }
+
+    .product-info {
+        padding: var(--spacing-md);
+    }
+
+    .product-info h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .product-actions {
+        gap: var(--spacing-sm);
+    }
+
+    .badge {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    /* Forms */
+    .newsletter-form input,
+    .newsletter-form button {
+        padding: var(--spacing-md);
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .footer-section h4 {
+        font-size: var(--font-size-base);
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY & SPECIAL CONDITIONS
+   ============================================ */
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+    a {
+        text-decoration: underline;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--primary-color);
+    }
+
+    .product-card {
+        background-color: #2a2a2a;
+        border-color: #444;
+    }
+
+    .product-image {
+        background-color: #333;
+    }
+
+    .about-section {
+        background-color: #1a1a1a;
+    }
+
+    .stat-card {
+        background-color: #2a2a2a;
+        border: 1px solid #444;
+    }
+
+    .footer {
+        background-color: #0a0a0a;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .newsletter-section,
+    .icon-btn,
+    .btn-icon {
+        display: none;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 600px) {
+    .hero {
+        padding: 40px var(--spacing-lg);
+        min-height: auto;
+    }
+
+    .nav-menu {
+        gap: var(--spacing-md);
+    }
+
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+/* Portrait Orientation */
+@media (orientation: portrait) {
+    .hero {
+        min-height: 400px;
+    }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    .product-card:hover {
+        transform: none;
+    }
+
+    .icon-btn:hover {
+        transform: none;
+    }
+
+    .btn-icon:hover {
+        opacity: 0.8;
+    }
+}

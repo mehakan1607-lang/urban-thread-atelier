@@ -1,0 +1,495 @@
+/* ===========================
+   Pricing Page Styles
+   =========================== */
+
+.pricing-header {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(42, 42, 42, 0.6) 100%);
+    padding: 100px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    text-align: center;
+}
+
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.header-subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* ===========================
+   Collections
+   =========================== */
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.collection-card {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.collection-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.collection-card:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+    transform: translateY(-10px);
+}
+
+.collection-card:hover::before {
+    left: 100%;
+}
+
+.collection-card.featured {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border: 2px solid var(--accent-gold);
+}
+
+.collection-card.featured:hover {
+    transform: scale(1.08) translateY(-15px);
+}
+
+.collection-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-gold);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+.collection-badge.premium {
+    background: linear-gradient(135deg, #d4af37, #e8c547);
+}
+
+.collection-badge.luxury {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.collection-header {
+    margin-bottom: 30px;
+}
+
+.collection-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.price-from {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.price {
+    color: var(--accent-gold);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.collection-items {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.collection-items li {
+    padding: 12px 0;
+    color: var(--text-secondary);
+    font-size: 15px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
+    padding-left: 25px;
+}
+
+.collection-items li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+/* ===========================
+   Membership Section
+   =========================== */
+
+.membership-section {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.5) 0%, rgba(42, 42, 42, 0.3) 100%);
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.membership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.membership-card {
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-card:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+    transform: translateY(-10px);
+}
+
+.membership-card.highlighted {
+    border: 2px solid var(--accent-gold);
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(212, 175, 55, 0.02) 100%);
+}
+
+.membership-card.highlighted:hover {
+    transform: scale(1.08) translateY(-15px);
+}
+
+.membership-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #d4af37, #e8c547);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+}
+
+.membership-tier {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.membership-price {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.price-amount {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent-gold);
+    line-height: 1;
+}
+
+.price-period {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.membership-benefits {
+    list-style: none;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.membership-benefits li {
+    padding: 12px 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    position: relative;
+    padding-left: 25px;
+}
+
+.membership-benefits li:last-child {
+    border-bottom: none;
+}
+
+.membership-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+/* ===========================
+   Comparison Table
+   =========================== */
+
+.membership-comparison {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.membership-comparison h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.comparison-table thead {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+}
+
+.comparison-table th {
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.comparison-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===========================
+   FAQ Section
+   =========================== */
+
+.faq-section {
+    background: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 60px 40px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.faq-item {
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.02);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateX(10px);
+}
+
+.faq-question {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--accent-gold);
+}
+
+.faq-answer {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ===========================
+   CTA Section
+   =========================== */
+
+.cta-section {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 4px;
+    padding: 80px 40px;
+    text-align: center;
+    margin: 80px 20px 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 48px);
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.cta-content p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 768px) {
+    .pricing-header {
+        padding: 60px 20px;
+    }
+
+    .header-title {
+        font-size: 32px;
+    }
+
+    .collections-grid {
+        gap: 25px;
+    }
+
+    .collection-card.featured {
+        transform: scale(1);
+    }
+
+    .collection-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
+    .membership-grid {
+        gap: 25px;
+    }
+
+    .membership-card.highlighted {
+        transform: scale(1);
+    }
+
+    .membership-card.highlighted:hover {
+        transform: translateY(-10px);
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        font-size: 14px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 15px 10px;
+    }
+
+    .cta-section {
+        padding: 50px 30px;
+        margin: 60px 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 28px;
+    }
+
+    .collections-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .membership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-amount {
+        font-size: 36px;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table {
+        font-size: 12px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px 8px;
+    }
+
+    .cta-section {
+        padding: 40px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+    }
+}

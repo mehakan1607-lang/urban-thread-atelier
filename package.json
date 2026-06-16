@@ -1,0 +1,23 @@
+{
+  "name": "urban-thread-atelier",
+  "version": "1.0.0",
+  "description": "World-class luxury fashion e-commerce website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "npx http-server"
+  },
+  "keywords": [
+    "fashion",
+    "luxury",
+    "ecommerce",
+    "designer",
+    "clothing"
+  ],
+  "author": "Urban Thread Atelier",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehakan1607-lang/urban-thread-atelier.git"
+  }
+}

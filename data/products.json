@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "product-001",
+      "name": "Premium Silk Jacket",
+      "designer": "Elegance & Co.",
+      "price": 2499,
+      "originalPrice": null,
+      "category": "outerwear",
+      "image": "https://via.placeholder.com/300x400?text=Premium+Jacket",
+      "description": "Luxurious silk jacket with premium craftsmanship",
+      "badge": "New",
+      "rating": 4.8,
+      "reviews": 42
+    },
+    {
+      "id": "product-002",
+      "name": "Evening Gown",
+      "designer": "Haute Couture",
+      "price": 2999,
+      "originalPrice": 3999,
+      "category": "dresses",
+      "image": "https://via.placeholder.com/300x400?text=Luxury+Dress",
+      "description": "Elegant evening gown perfect for special occasions",
+      "badge": "Sale",
+      "rating": 4.9,
+      "reviews": 58
+    },
+    {
+      "id": "product-003",
+      "name": "Italian Leather Shoes",
+      "designer": "Luxe Footwear",
+      "price": 1299,
+      "originalPrice": null,
+      "category": "footwear",
+      "image": "https://via.placeholder.com/300x400?text=Designer+Shoes",
+      "description": "Handcrafted Italian leather shoes with premium soles",
+      "badge": "Exclusive",
+      "rating": 4.7,
+      "reviews": 35
+    },
+    {
+      "id": "product-004",
+      "name": "Leather Handbag",
+      "designer": "Prestige Accessories",
+      "price": 1899,
+      "originalPrice": null,
+      "category": "accessories",
+      "image": "https://via.placeholder.com/300x400?text=Designer+Bag",
+      "description": "Premium leather handbag with sophisticated design",
+      "badge": "Premium",
+      "rating": 4.6,
+      "reviews": 47
+    }
+  ],
+  "categories": [
+    "outerwear",
+    "dresses",
+    "footwear",
+    "accessories",
+    "jewelry",
+    "bags"
+  ],
+  "designers": [
+    "Elegance & Co.",
+    "Haute Couture",
+    "Luxe Footwear",
+    "Prestige Accessories"
+  ]
+}

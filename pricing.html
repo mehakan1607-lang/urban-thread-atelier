@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urban Thread Collections & Membership Plans - Premium Fashion Pricing">
+    <title>Collections & Pricing - Urban Thread</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pricing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">URBAN</span>
+                    <span class="logo-highlight">THREAD</span>
+                </a>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Shop</a>
+                <a href="pricing.html" class="nav-link active">Collections</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-icons">
+                <button class="nav-icon" id="searchBtn" title="Search">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <circle cx="8" cy="8" r="6"></circle>
+                        <path d="m12 12 4 4"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" id="wishlistBtn" title="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <path d="M10 18.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-6.55 8.53L10 18.35z"></path>
+                    </svg>
+                </button>
+                <button class="nav-icon" id="cartBtn" title="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                        <path d="M3 3h2l.4 2M5 5h14l-1 8H6l-1-8z"></path>
+                        <circle cx="8" cy="17" r="1"></circle>
+                        <circle cx="16" cy="17" r="1"></circle>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="nav-icon menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pricing-header">
+        <h1 class="header-title" data-aos="fade-up">Collections & Pricing</h1>
+        <p class="header-subtitle" data-aos="fade-up" data-aos-delay="100">Explore our curated collections at every price point</p>
+    </section>
+
+    <!-- Collections -->
+    <section class="section collections">
+        <div class="collections-grid">
+            <!-- Essential Collection -->
+            <div class="collection-card" data-aos="fade-up">
+                <div class="collection-badge">Essential</div>
+                <div class="collection-header">
+                    <h2>Essential Collection</h2>
+                    <p class="price-from">Starting from <span class="price">$89</span></p>
+                </div>
+
+                <ul class="collection-items">
+                    <li>Premium T-Shirts</li>
+                    <li>Classic Hoodies</li>
+                    <li>Luxury Sweatshirts</li>
+                    <li>Everyday Basics</li>
+                    <li>Quality Assured</li>
+                </ul>
+
+                <button class="btn btn-primary btn-block">Shop Now</button>
+            </div>
+
+            <!-- Signature Collection -->
+            <div class="collection-card featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="collection-badge premium">Popular</div>
+                <div class="collection-header">
+                    <h2>Signature Collection</h2>
+                    <p class="price-from">Starting from <span class="price">$249</span></p>
+                </div>
+
+                <ul class="collection-items">
+                    <li>Designer Jackets</li>
+                    <li>Premium Denim</li>
+                    <li>Luxury Knitwear</li>
+                    <li>Statement Pieces</li>
+                    <li>Limited Availability</li>
+                </ul>
+
+                <button class="btn btn-primary btn-block">Shop Now</button>
+            </div>
+
+            <!-- Elite Collection -->
+            <div class="collection-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="collection-badge luxury">Exclusive</div>
+                <div class="collection-header">
+                    <h2>Elite Collection</h2>
+                    <p class="price-from">Starting from <span class="price">$599</span></p>
+                </div>
+
+                <ul class="collection-items">
+                    <li>Limited Edition Pieces</li>
+                    <li>Runway Inspired Designs</li>
+                    <li>Handcrafted Garments</li>
+                    <li>Exclusive Materials</li>
+                    <li>VIP Access</li>
+                </ul>
+
+                <button class="btn btn-primary btn-block">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Program -->
+    <section class="section membership-section">
+        <div class="section-header">
+            <h2 class="section-title" data-aos="fade-up">Urban Elite Club Membership</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Exclusive benefits for our most valued customers</p>
+        </div>
+
+        <div class="membership-grid">
+            <!-- Silver -->
+            <div class="membership-card" data-aos="fade-up">
+                <div class="membership-tier">Silver</div>
+                <div class="membership-price">
+                    <span class="price-amount">$19</span>
+                    <span class="price-period">/month</span>
+                </div>
+
+                <ul class="membership-benefits">
+                    <li>✓ Early access to new drops</li>
+                    <li>✓ 10% discount on all items</li>
+                    <li>✓ Free standard shipping</li>
+                    <li>✓ Priority customer support</li>
+                    <li>✓ Monthly exclusive newsletter</li>
+                </ul>
+
+                <button class="btn btn-secondary btn-block">Choose Plan</button>
+            </div>
+
+            <!-- Gold -->
+            <div class="membership-card highlighted" data-aos="fade-up" data-aos-delay="100">
+                <div class="membership-badge">Most Popular</div>
+                <div class="membership-tier">Gold</div>
+                <div class="membership-price">
+                    <span class="price-amount">$49</span>
+                    <span class="price-period">/month</span>
+                </div>
+
+                <ul class="membership-benefits">
+                    <li>✓ Everything in Silver +</li>
+                    <li>✓ 20% discount on all items</li>
+                    <li>✓ Free expedited shipping</li>
+                    <li>✓ Exclusive member events</li>
+                    <li>✓ Personal styling consultation</li>
+                    <li>✓ Birthday gift</li>
+                </ul>
+
+                <button class="btn btn-primary btn-block">Choose Plan</button>
+            </div>
+
+            <!-- Black -->
+            <div class="membership-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="membership-tier">Black</div>
+                <div class="membership-price">
+                    <span class="price-amount">$99</span>
+                    <span class="price-period">/month</span>
+                </div>
+
+                <ul class="membership-benefits">
+                    <li>✓ Everything in Gold +</li>
+                    <li>✓ 30% discount on all items</li>
+                    <li>✓ Exclusive private collections</li>
+                    <li>✓ VIP access to runway shows</li>
+                    <li>✓ Dedicated account manager</li>
+                    <li>✓ Custom bespoke services</li>
+                </ul>
+
+                <button class="btn btn-primary btn-block">Choose Plan</button>
+            </div>
+        </div>
+
+        <div class="membership-comparison" data-aos="fade-up">
+            <h3>Membership Comparison</h3>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Silver</th>
+                        <th>Gold</th>
+                        <th>Black</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly Price</td>
+                        <td>$19</td>
+                        <td>$49</td>
+                        <td>$99</td>
+                    </tr>
+                    <tr>
+                        <td>Discount Percentage</td>
+                        <td>10%</td>
+                        <td>20%</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>Free Shipping</td>
+                        <td>Standard</td>
+                        <td>Expedited</td>
+                        <td>Express</td>
+                    </tr>
+                    <tr>
+                        <td>Early Access</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Exclusive Events</td>
+                        <td>-</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Personal Styling</td>
+                        <td>-</td>
+                        <td>✓</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Private Collections</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>VIP Runway Access</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr>
+                        <td>Bespoke Services</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>✓</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+        <div class="section-header">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item" data-aos="fade-up">
+                <h3 class="faq-question">Can I cancel my membership anytime?</h3>
+                <p class="faq-answer">Yes, you can cancel your membership at any time without penalties. Your membership will remain active until the end of the current billing cycle.</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="faq-question">Do discounts apply to sale items?</h3>
+                <p class="faq-answer">Membership discounts apply to regular prices. Sale items have their own pricing structure. Combine them for maximum savings!</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="faq-question">How does the personal styling work?</h3>
+                <p class="faq-answer">Gold and Black members get access to our styling team. Book your consultation through your account dashboard.</p>
+            </div>
+
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="faq-question">What if I'm not satisfied?</h3>
+                <p class="faq-answer">We offer a 30-day money-back guarantee on your first membership payment if you're not completely satisfied.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content" data-aos="fade-up">
+            <h2>Ready to Join the Urban Elite?</h2>
+            <p>Experience luxury fashion with exclusive benefits and VIP access</p>
+            <button class="btn btn-primary">Start Your Membership</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Urban Thread</h4>
+                <p>Redefining modern luxury through timeless designs and premium craftsmanship.</p>
+                <div class="social-links">
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="TikTok">♪</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Men's Collection</a></li>
+                    <li><a href="#">Women's Collection</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Limited Edition</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: hello@urbanthreadatelier.com</p>
+                <p>Phone: +1 (800) URBAN-THREAD</p>
+                <p>Address: 123 Fashion Avenue, New York, NY 10001</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Urban Thread. All rights reserved. | Crafted with elegance</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
